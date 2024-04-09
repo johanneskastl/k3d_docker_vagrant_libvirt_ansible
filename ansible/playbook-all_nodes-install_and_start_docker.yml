@@ -1,0 +1,15 @@
+---
+- name: 'Install and start docker'
+  hosts: 'all'
+  gather_facts: true
+  become: true
+
+  roles:
+    - role: 'johanneskastl.install_one_or_more_packages'
+      packages_to_be_installed:
+        - 'docker'
+
+    - role: 'johanneskastl.start_and_or_enable_systemd_service'
+      service_name: 'docker'
+      service_started: true
+      service_enabled: true

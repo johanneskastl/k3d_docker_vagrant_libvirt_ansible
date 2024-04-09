@@ -25,5 +25,8 @@
 - name: 'Run playbook-all_nodes-install_and_start_docker.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-install_and_start_docker.yml
 
+- name: 'Run playbook-all_nodes-add_vagrant_user_to_docker_group.yml'
+  ansible.builtin.import_playbook: playbook-all_nodes-add_vagrant_user_to_docker_group.yml
+
 - name: 'Run playbook-all_nodes-install_k3d.yml'
   ansible.builtin.import_playbook: playbook-all_nodes-install_k3d.yml
